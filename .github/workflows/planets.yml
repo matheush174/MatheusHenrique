@@ -28,6 +28,6 @@ jobs:
           npm test tests/singleFilm.test.js
           npm test tests/singlePlanet.test.js
           npm test tests/singleStarship.test.js
-          # npm test tests/species.test.js
+          npm test tests/species.test.js
           # npm test tests/starships.test.js
           # npm test tests/vehicles.test.js
