@@ -11,22 +11,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '16'
+      - uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
 
-    - run: npm install
+      - run: npm install
 
-    - name: Run Planets Test
-      run: npm test tests/planets.test.js
-      run: npm test tests/films.test.js
-      run: npm test tests/nonExistentRoute.tests.js
-      run: npm test tests/people.tests.js
-      run: npm test tests/singleFilm.tests.js
-      run: npm test tests/singlePlanet.tests.js
-      run: npm test tests/singleStarship.tests.js
-      run: npm test tests/species.tests.js
-      run: npm test tests/starships.tests.js
-      run: npm test tests/vehicles.tests.js
+      - name: Run All Tests
+        run: |
+          npm test tests/planets.test.js
+          npm test tests/films.test.js
+          npm test tests/nonExistentRoute.test.js
+          npm test tests/people.test.js
+          npm test tests/singleFilm.test.js
+          npm test tests/singlePlanet.test.js
+          npm test tests/singleStarship.test.js
+          npm test tests/species.test.js
+          npm test tests/starships.test.js
+          npm test tests/vehicles.test.js
