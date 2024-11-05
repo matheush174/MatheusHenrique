@@ -22,7 +22,7 @@ jobs:
       - name: Run All Tests
         run: |
           npm test tests/planets.test.js
-          # npm test tests/films.test.js
+          npm test tests/films.test.js
           # npm test tests/nonExistentRoute.test.js
           # npm test tests/people.test.js
           # npm test tests/singleFilm.test.js
