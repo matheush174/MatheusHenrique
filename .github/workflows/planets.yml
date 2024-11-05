@@ -1,0 +1,23 @@
+name: Test Planets
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+
+    - run: npm install
+
+    - name: Run Planets Test
+      run: npm test tests/planets.test.js
