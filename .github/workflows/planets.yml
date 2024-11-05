@@ -21,3 +21,12 @@ jobs:
 
     - name: Run Planets Test
       run: npm test tests/planets.test.js
+      run: npm test tests/films.test.js
+      run: npm test tests/nonExistentRoute.tests.js
+      run: npm test tests/people.tests.js
+      run: npm test tests/singleFilm.tests.js
+      run: npm test tests/singlePlanet.tests.js
+      run: npm test tests/singleStarship.tests.js
+      run: npm test tests/species.tests.js
+      run: npm test tests/starships.tests.js
+      run: npm test tests/vehicles.tests.js
